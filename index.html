@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081817">
+  <meta name="description" content="TERRA helps people prepare for disasters, learn essential knowledge, and protect life through trusted information.">
+  <title>TERRA — Every Life Matters</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="brand" aria-label="TERRA home">
+      <span class="brand-symbol">T.</span>
+      <span>TERRA<small>HUMAN RESILIENCE</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="navLinks">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#mission">Our mission</a>
+      <a href="#prepare">Prepare</a>
+      <a href="#learn">Learn</a>
+      <a href="#trust">Our sources</a>
+      <a href="#prepare" class="nav-cta">Take action ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image" role="img"
+        aria-label="People standing together in a natural landscape"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          A GLOBAL HUMAN RESILIENCE PLATFORM
+        </div>
+
+        <h1>Every life matters.<br>
+          <span>Every mind can learn.</span>
+        </h1>
+
+        <p>
+          A safer world begins with knowledge we can trust.
+          Prepare for the unexpected. Learn without limits.
+          Protect what matters most.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#prepare" class="button button-primary">
+            Prepare for tomorrow <span>↗</span>
+          </a>
+          <a href="#mission" class="button button-ghost">
+            Discover our mission
+          </a>
+        </div>
+
+        <div class="hero-note">
+          KNOW THE RISK. PREPARE. PROTECT LIFE.
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>BUILT FOR PEOPLE. DESIGNED FOR EVERYONE.</span>
+        <a href="#mission">SCROLL TO EXPLORE ↓</a>
+      </div>
+    </section>
+
+    <section class="section mission-section" id="mission">
+      <div class="section-heading">
+        <span class="section-label">01 / WHY TERRA EXISTS</span>
+        <h2>Knowledge should never be<br>
+          <span>a privilege.</span>
+        </h2>
+      </div>
+
+      <div class="mission-grid">
+        <article class="mission-card">
+          <span class="card-number">01</span>
+          <span class="card-icon">◈</span>
+          <h3>Protect life</h3>
+          <p>
+            Understand risks, build preparedness, and discover
+            reliable guidance before an emergency happens.
+          </p>
+          <a href="#prepare">Explore preparedness ↗</a>
+        </article>
+
+        <article class="mission-card">
+          <span class="card-number">02</span>
+          <span class="card-icon">◎</span>
+          <h3>Learn without limits</h3>
+          <p>
+            Access useful knowledge regardless of where you live,
+            what school you attend, or where your journey begins.
+          </p>
+          <a href="#learn">Explore learning ↗</a>
+        </article>
+
+        <article class="mission-card">
+          <span class="card-number">03</span>
+          <span class="card-icon">✳</span>
+          <h3>Care for our planet</h3>
+          <p>
+            Discover practical ways to reduce waste, protect nature,
+            and contribute to a healthier environment.
+          </p>
+          <a href="#planet">Explore action ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section prepare-section" id="prepare">
+      <div class="section-heading">
+        <span class="section-label">02 / BE READY</span>
+        <h2>Preparedness starts<br>with <span>one small step.</span></h2>
+        <p>Build your personal checklist and make preparation a habit.</p>
+      </div>
+
+      <div class="prepare-layout">
+        <div class="prepare-intro">
+          <div class="prepare-icon">✳</div>
+          <h3>Your next step</h3>
+          <p>
+            Read each task, complete what you can, and track your
+            progress on this device.
+          </p>
+          <div class="progress-label">
+            <span>Your progress</span>
+            <strong id="progressText">0 / 5</strong>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="checklist" id="checklist">
+          <label class="check-item">
+            <input type="checkbox" data-task="water">
+            <span class="custom-check"></span>
+            <span class="check-copy">
+              <strong>Identify safe drinking water</strong>
+              <small>Plan how your household will access safe water.</small>
+            </span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" data-task="contacts">
+            <span class="custom-check"></span>
+            <span class="check-copy">
+              <strong>Save emergency contacts</strong>
+              <small>Keep important numbers accessible offline.</small>
+            </span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" data-task="meeting">
+            <span class="custom-check"></span>
+            <span class="check-copy">
+              <strong>Choose a family meeting point</strong>
+              <small>Agree on a safe place if you become separated.</small>
+            </span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" data-task="supplies">
+            <span class="custom-check"></span>
+            <span class="check-copy">
+              <strong>Prepare essential supplies</strong>
+              <small>Consider local needs, medication, food, and light.</small>
+            </span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" data-task="routes">
+            <span class="custom-check"></span>
+            <span class="check-copy">
+              <strong>Learn your evacuation routes</strong>
+              <small>Follow official local guidance and identify safe exits.</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <p class="safety-note">
+        Important: These are general preparedness prompts, not
+        location-specific emergency instructions. Check your local
+        emergency management authority for official guidance.
+      </p>
+    </section>
+
+    <section class="section learn-section" id="learn">
+      <div class="section-heading split-heading">
+        <div>
+          <span class="section-label">03 / KNOWLEDGE FOR EVERYONE</span>
+          <h2>Learn something<br><span>that matters.</span></h2>
+        </div>
+        <p>
+          Explore starter lessons. Before relying on safety advice,
+          verify its content against the cited authoritative source.
+        </p>
+      </div>
+
+      <div class="lesson-tools">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="lessonSearch"
+            placeholder="Search lessons..."
+            aria-label="Search lessons">
+        </label>
+
+        <div class="filter-group" aria-label="Filter lessons">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="safety">Safety</button>
+          <button class="filter-button" data-filter="learning">Learning</button>
+          <button class="filter-button" data-filter="planet">Planet</button>
+        </div>
+      </div>
+
+      <div class="lesson-grid" id="lessonGrid">
+        <article class="lesson-card" data-category="safety"
+          data-title="Build a family emergency plan">
+          <div class="lesson-art art-safety">
+            <span>SAFETY / 01</span>
+            <div class="art-symbol">↗</div>
+          </div>
+          <div class="lesson-content">
+            <span class="lesson-tag">PREPAREDNESS</span>
+            <h3>Build a family emergency plan</h3>
+            <p>Start with communication, meeting points, and local risks.</p>
+            <button class="text-button" data-lesson="plan">
+              Explore lesson ↗
+            </button>
+          </div>
+        </article>
+
+        <article class="lesson-card" data-category="learning"
+          data-title="Make knowledge accessible">
+          <div class="lesson-art art-learning">
+            <span>LEARNING / 02</span>
+            <div class="art-symbol">◎</div>
+          </div>
+          <div class="lesson-content">
+            <span class="lesson-tag">OPEN LEARNING</span>
+            <h3>Make knowledge accessible</h3>
+            <p>Find learning resources that help you grow at your own pace.</p>
+            <button class="text-button" data-lesson="learning">
+              Explore lesson ↗
+            </button>
+          </div>
+        </article>
+
+        <article class="lesson-card" data-category="planet"
+          data-title="Small actions for a healthier planet">
+          <div class="lesson-art art-planet">
+            <span>PLANET / 03</span>
+            <div class="art-symbol">✳</div>
+          </div>
+          <div class="lesson-content">
+            <span class="lesson-tag">ENVIRONMENT</span>
+            <h3>Small actions for a healthier planet</h3>
+            <p>Explore practical ways to reduce waste and protect nature.</p>
+            <button class="text-button" data-lesson="planet">
+              Explore lesson ↗
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <p class="empty-state" id="emptyState" hidden>
+        No lessons match your search. Try another keyword.
+      </p>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-copy">
+        <span class="section-label">04 / TEST YOUR KNOWLEDGE</span>
+        <h2>Knowledge becomes<br><span>power through action.</span></h2>
+        <p>
+          Try a short preparedness question. This is a learning
+          demonstration, not a certification.
+        </p>
+      </div>
+
+      <div class="quiz-card" id="quizCard">
+        <span class="quiz-step" id="quizStep">QUESTION 01 / 01</span>
+        <h3 id="quizQuestion">
+          What is a useful first step in household preparedness?
+        </h3>
+        <div class="quiz-options" id="quizOptions">
+          <button class="quiz-option" data-answer="a">
+            A. Wait until an emergency happens
+          </button>
+          <button class="quiz-option" data-answer="b">
+            B. Identify local risks and make a plan
+          </button>
+          <button class="quiz-option" data-answer="c">
+            C. Rely only on social media rumors
+          </button>
+        </div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+        <button class="button button-primary quiz-retry"
+          id="quizRetry" hidden>Try again ↻</button>
+      </div>
+    </section>
+
+    <section class="section planet-section" id="planet">
+      <div class="planet-content">
+        <span class="section-label">05 / OUR SHARED HOME</span>
+        <h2>A healthier planet<br>starts with <span>us.</span></h2>
+        <p>
+          Environmental progress is built from informed choices,
+          collective action, and respect for the communities most
+          affected by environmental change.
+        </p>
+        <a class="button button-primary"
+          href="https://www.unep.org/" target="_blank"
+          rel="noopener noreferrer">
+          Explore UNEP resources ↗
+        </a>
+      </div>
+    </section>
+
+    <section class="section trust-section" id="trust">
+      <span class="section-label">06 / TRUST & TRANSPARENCY</span>
+      <h2>Trust is built through<br><span>honesty and evidence.</span></h2>
+
+      <div class="trust-grid">
+        <article>
+          <span>01</span>
+          <h3>Credible sources</h3>
+          <p>
+            Seek information from recognized public agencies and
+            qualified humanitarian or educational organizations.
+          </p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Clear limitations</h3>
+          <p>
+            TERRA is an independent educational project, not an
+            emergency service or a medical professional.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Keep learning</h3>
+          <p>
+            Safety guidance can change. Check publication dates,
+            local requirements, and original sources.
+          </p>
+        </article>
+      </div>
+
+      <div class="source-links">
+        <a href="https://www.ifrc.org/" target="_blank"
+          rel="noopener noreferrer">IFRC ↗</a>
+        <a href="https://www.unesco.org/" target="_blank"
+          rel="noopener noreferrer">UNESCO ↗</a>
+        <a href="https://www.unep.org/" target="_blank"
+          rel="noopener noreferrer">UNEP ↗</a>
+        <a href="https://www.who.int/" target="_blank"
+          rel="noopener noreferrer">WHO ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="brand footer-brand">
+      <span class="brand-symbol">T.</span>
+      <span>TERRA<small>HUMAN RESILIENCE</small></span>
+    </a>
+    <p>Every life matters. Every mind can learn.</p>
+    <span>© <span id="year"></span> TERRA · Independent project</span>
+  </footer>
+
+  <dialog class="lesson-dialog" id="lessonDialog">
+    <button class="dialog-close" id="dialogClose"
+      aria-label="Close lesson">×</button>
+    <span class="section-label" id="dialogCategory">TERRA LEARNING</span>
+    <h2 id="dialogTitle">Lesson title</h2>
+    <p id="dialogBody"></p>
+    <a id="dialogSource" href="https://www.ifrc.org/"
+      target="_blank" rel="noopener noreferrer">
+      Visit an external source ↗
+    </a>
+    <p class="dialog-warning">
+      Read the original source and follow official local instructions.
+      This preview is not a substitute for verified guidance.
+    </p>
+  </dialog>
+
+</body>
+</html>
